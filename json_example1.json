@@ -1,0 +1,15 @@
+{
+    "states": ["q0", "q1", "q2"],
+    "alphabet": ["0", "1"],
+    "tape_alphabet": ["0", "1", "_"],
+    "initial_state": "q0",
+    "blank_symbol": "_",
+    "final_states": ["q2"],
+    "transitions": [
+        {"from": "q0", "read": "0", "to": "q0", "write": "0", "direction": "R"},
+        {"from": "q0", "read": "1", "to": "q0", "write": "1", "direction": "R"},
+        {"from": "q0", "read": "_", "to": "q1", "write": "_", "direction": "L"},
+        {"from": "q1", "read": "0", "to": "q2", "write": "1", "direction": "R"},
+        {"from": "q1", "read": "1", "to": "q1", "write": "0", "direction": "L"}
+    ]
+}
